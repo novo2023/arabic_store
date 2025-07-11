@@ -1,0 +1,61 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Keranjang Belanja{% endblock %}
+
+{% block content %}
+    <section class="cart-container">
+        <div class="container">
+            <h2 class="section-title">Keranjang Belanja</h2>
+            
+            {% if cart|length > 0 %}
+            <div class="cart-items">
+                {% for item in cart %}
+                {% with product=item.product %}
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" width="100" height="100" style="object-fit:cover;">
+                        {% else %}
+                        <img src="{% static 'images/no_image.png' %}" alt="No image" width="100" height="100" style="object-fit:cover;">
+                        {% endif %}
+                    </div>
+                    <div class="cart-item-info">
+                        <h3>{{ product.name }}</h3>
+                        <p>Ukuran: {{ item.size }}</p>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <form action="{% url 'store:cart_add' product.id %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="size" value="{{ item.size }}">
+                            <input type="number" name="quantity" value="{{ item.quantity }}" min="1" class="quantity-input">
+                            <button type="submit" class="update-btn">Perbarui</button>
+                        </form>
+                    </div>
+                    <div class="cart-item-price">Rp {{ item.total_price }}</div>
+                    <a href="{% url 'store:cart_remove' product.id %}?size={{ item.size }}" class="remove-btn">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </div>
+                {% endwith %}
+                {% endfor %}
+            </div>
+            
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span>Rp {{ cart.get_total_price }}</span>
+                </div>
+                <a href="{% url 'store:checkout' %}" class="btn-large">Lanjut ke Pembayaran</a>
+            </div>
+            {% else %}
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Keranjang belanja Anda kosong</h3>
+                <p>Tambahkan beberapa produk untuk melanjutkan</p>
+                <a href="{% url 'store:catalog' %}" class="btn-large">Jelajahi Produk</a>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

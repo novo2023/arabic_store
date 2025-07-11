@@ -1,0 +1,21 @@
+{% extends "store/base.html" %}
+{% load humanize %}
+{% block title %}Konfirmasi Pesanan - COD{% endblock %}
+{% block content %}
+<div class="container" style="max-width:500px;margin:40px auto;">
+    <h2 class="section-title" style="text-align:center;">Pesanan Berhasil!</h2>
+    <div style="margin:24px 0;text-align:center;">
+        <i class="fas fa-box-open" style="font-size:3em;color:#1a8917;"></i>
+        <p style="margin-top:16px;">Pesanan Anda telah diterima.<br>Silakan siapkan pembayaran saat barang diterima (COD).</p>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+        <p style="text-align:center;font-size:1.2em;font-weight:bold;">
+            Total Pembayaran: Rp 
+            {% if total_bayar is not None %}{{ total_bayar|intcomma }}{% else %}{{ order.get_total_cost|add:order.shipping_cost|default:0|intcomma }}{% endif %}
+        </p>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+        <a href="/" class="btn btn-primary">Kembali ke Beranda</a>
+    </div>
+</div>
+{% endblock %}

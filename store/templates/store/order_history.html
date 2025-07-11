@@ -1,0 +1,91 @@
+{% extends "store/base.html" %}
+{% load humanize %}
+{% block title %}Riwayat Transaksi{% endblock %}
+{% block content %}
+<div class="container" style="max-width:800px;margin:40px auto;">
+    <h2 class="section-title">Riwayat Transaksi</h2>
+    {% if orders %}
+    <table class="table" style="width:100%;background:#d6c2ac;border-radius:8px;box-shadow:0 2px 8px #0001;">
+        <thead>
+            <tr style="background:#e7e7e7;">
+                <th>Tanggal</th>
+                <th>Produk</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Detail</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.created|date:"d M Y H:i" }}</td>
+                <td>
+                    <ul style="margin:0;padding-left:18px;">
+                    {% for item in order.items.all %}
+                        <li>{{ item.product }}{% if item.variation %} ({{ item.variation }}){% endif %} x{{ item.quantity }}</li>
+                    {% endfor %}
+                    </ul>
+                </td>
+                <td>
+                    Rp {{ order.get_total_cost|intcomma }} + Rp {{ order.shipping_cost|intcomma }}<br>
+                    <b>= Rp {{ order.get_total_cost|add:order.shipping_cost|intcomma }}</b>
+                </td>
+                <td>{% if order.paid %}<span style="color:green;">Lunas</span>{% else %}<span style="color:#e53935;">Belum Bayar</span>{% endif %}</td>
+                <td>
+                    <button onclick="showDetail({{ order.id }})" style="padding:4px 12px;border-radius:5px;background:#1976d2;color:#fff;border:none;cursor:pointer;">Lihat</button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p style="text-align:center;">Belum ada transaksi.</p>
+    {% endif %}
+
+    <!-- Modal Detail Pesanan -->
+    <div id="orderDetailModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:9999;align-items:center;justify-content:center;">
+        <div style="background:#e2d7b9;padding:32px 24px;border-radius:10px;max-width:500px;width:90vw;position:relative;">
+            <button onclick="closeDetail()" style="position:absolute;top:12px;right:12px;background:none;border:none;font-size:22px;cursor:pointer;">&times;</button>
+            <h3>Detail Pesanan</h3>
+            <div id="orderDetailContent">Memuat...</div>
+        </div>
+    </div>
+</div>
+<script>
+function showDetail(orderId) {
+    // Debug: pastikan fungsi terpanggil
+    console.log('showDetail called', orderId);
+    fetch(`/orders/${orderId}/json/`)
+        .then(res => {
+            if (!res.ok) throw new Error('Gagal fetch detail pesanan');
+            return res.json();
+        })
+        .then(function(data) {
+            let html = `<table style='width:100%;margin-bottom:12px;'>`;
+            html += `<tr><td><b>Nama Pembeli</b></td><td>${data.buyer_name || '-'}</td></tr>`;
+            html += `<tr><td><b>Tanggal</b></td><td>${data.created}</td></tr>`;
+            html += `<tr><td><b>Alamat</b></td><td>${data.address}</td></tr>`;
+            html += `<tr><td><b>Metode Pembayaran</b></td><td>${data.payment_method || '-'}</td></tr>`;
+            html += `<tr><td><b>Status</b></td><td>` + (data.paid ? '<span style="color:green;">Lunas</span>' : '<span style="color:#e53935;">Belum Bayar</span>') + `</td></tr>`;
+            html += `</table>`;
+            html += `<b>Daftar Produk:</b><ul style='margin-bottom:10px;'>`;
+            data.items.forEach(function(item) {
+                html += `<li>${item.product}${item.variation ? ' ('+item.variation+')' : ''} x${item.quantity}</li>`;
+            });
+            html += `</ul>`;
+            html += `<b>Harga:</b> Rp ${data.total_cost.toLocaleString()}<br>`;
+            html += `<b>Ongkir:</b> Rp ${data.shipping_cost.toLocaleString()}<br>`;
+            html += `<b>Total:</b> <b>Rp ${(Number(data.total_cost) + Number(data.shipping_cost)).toLocaleString()}</b>`;
+            document.getElementById('orderDetailContent').innerHTML = html;
+            document.getElementById('orderDetailModal').style.display = 'flex';
+        })
+        .catch(function(err) {
+            alert('Gagal memuat detail pesanan!');
+            console.error(err);
+        });
+}
+function closeDetail() {
+    document.getElementById('orderDetailModal').style.display = 'none';
+}
+</script>
+{% endblock %}

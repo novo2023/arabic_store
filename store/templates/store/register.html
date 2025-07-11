@@ -1,0 +1,96 @@
+{% extends "store/base.html" %}
+{% block title %}Daftar Akun{% endblock %}
+{% block content %}
+<div class="register-container">
+    <h2>Daftar Akun</h2>
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password1">Password</label>
+            <input type="password" id="password1" name="password1" required>
+        </div>
+        <div class="form-group">
+            <label for="password2">Konfirmasi Password</label>
+            <input type="password" id="password2" name="password2" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Daftar</button>
+    </form>
+    <p>Sudah punya akun? <a href="{% url 'store:login' %}">Login di sini</a></p>
+</div>
+<style>
+.register-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.register-container h2 {
+    margin-bottom: 24px;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 18px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    background: #0056b3;
+}
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.messages li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.messages .error {
+    background: #f8d7da;
+    color: #721c24;
+}
+.messages .success {
+    background: #d4edda;
+    color: #155724;
+}
+</style>
+{% endblock %}

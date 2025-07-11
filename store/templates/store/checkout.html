@@ -1,0 +1,257 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}Checkout - Arabic Store{% endblock %}
+
+{% block content %}
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content">
+                <span class="breadcrumb-item">Keranjang</span>
+                <span class="breadcrumb-divider">›</span>
+                <span class="breadcrumb-item active">Informasi & Pengiriman</span>
+                <span class="breadcrumb-divider">›</span>
+                <span class="breadcrumb-item">Pembayaran</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-grid">
+                <!-- Left Column: Shipping and Payment Form -->
+                <div class="form-section">
+                    <h2 class="section-title">Informasi Pengiriman</h2>
+                    {% if form.errors %}
+                    <div class="alert alert-danger" style="margin-bottom:16px;">
+                        <ul style="margin-bottom:0;">
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <li><strong>{{ field.label }}:</strong> {{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                        {% for error in form.non_field_errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    
+                    <form method="post" action="{% url 'store:checkout' %}" class="checkout-form">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="form-group" style="width:100%">
+                                <label for="fullName">Nama Lengkap</label>
+                                <input type="text" id="fullName" name="full_name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Alamat Lengkap</label>
+                            <textarea id="address" name="address" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="province">Provinsi</label>
+                                <select id="province" name="province" class="form-control" required>
+                                    <option value="">Pilih Provinsi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Kota/Kabupaten</label>
+                                <select id="city" name="city" class="form-control" required>
+                                    <option value="">Pilih Kota/Kabupaten</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subdistrict">Kecamatan</label>
+                            <select id="subdistrict" name="subdistrict" class="form-control" required>
+                                <option value="">Pilih Kecamatan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="shipping">Jasa Pengiriman</label>
+                            <select id="shipping" name="shipping_method" class="form-control" required>
+                                <option value="jne">JNE</option>
+                                <option value="jnt">JNT</option>
+                                <option value="sicepat">SiCepat</option>
+                                <option value="ninja">Ninja Xpress</option>
+                            </select>
+                        </div>
+                        
+                        <h2 class="section-title">Metode Pembayaran</h2>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-option active">
+                                <input type="radio" name="payment" class="payment-radio" value="qris" checked>
+                                <div class="payment-icon">
+                                    <i class="fas fa-qrcode"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <div class="payment-name">QRIS</div>
+                                    <div class="payment-desc">Pembayaran via QRIS (semua e-wallet & bank)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" name="payment" class="payment-radio" value="ewallet">
+                                <div class="payment-icon">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <div class="payment-name">Dompet Digital</div>
+                                    <div class="payment-desc">Gopay, OVO, Dana, LinkAja</div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" name="payment" class="payment-radio" value="bank_transfer">
+                                <div class="payment-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <div class="payment-name">Transfer Bank</div>
+                                    <div class="payment-desc">BCA, Mandiri, BNI, BRI</div>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-option">
+                                <input type="radio" name="payment" class="payment-radio" value="cod">
+                                <div class="payment-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div class="payment-info">
+                                    <div class="payment-name">Bayar di Tempat (COD)</div>
+                                    <div class="payment-desc">Bayar saat barang diterima</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Catatan Pesanan (Opsional)</label>
+                            <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Catatan khusus untuk penjual..."></textarea>
+                        </div>
+                        
+                        <input type="hidden" id="shipping_cost" name="shipping_cost" value="{{ shipping_cost }}">
+                        
+                        <button type="submit" class="checkout-btn">
+                            <i class="fas fa-lock"></i> Lanjutkan ke Pembayaran
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Right Column: Order Summary -->
+                <div class="order-summary">
+                    <h2 class="section-title">Ringkasan Pesanan</h2>
+                    
+                    <div class="order-items">
+                        {% if single_product %}
+                            <div class="order-item">
+                                <div class="order-item-image">
+                                    {% if single_product.product.image %}
+                                    <img src="{{ single_product.product.image.url }}" alt="{{ single_product.product.name }}">
+                                    {% else %}
+                                    <img src="{% static 'images/no_image.png' %}" alt="No image">
+                                    {% endif %}
+                                </div>
+                                <div class="order-item-info">
+                                    <div class="order-item-name">{{ single_product.product.name }}</div>
+                                    <div class="order-item-details">Jumlah: {{ single_product.quantity }}</div>
+                                    {% if single_product.size %}
+                                    <div class="order-item-details">Ukuran: {{ single_product.size }}</div>
+                                    {% endif %}
+                                    <div class="order-item-price">Rp {{ single_product.total_price }}</div>
+                                </div>
+                            </div>
+                        {% else %}
+                            {% for item in cart_items %}
+                            <div class="order-item">
+                                <div class="order-item-image">
+                                    {% if item.product.image %}
+                                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    {% else %}
+                                    <img src="{% static 'images/no_image.png' %}" alt="No image">
+                                    {% endif %}
+                                </div>
+                                <div class="order-item-info">
+                                    <div class="order-item-name">{{ item.product.name }}</div>
+                                    <div class="order-item-details">Jumlah: {{ item.quantity }}</div>
+                                    {% if item.size %}
+                                    <div class="order-item-details">Ukuran: {{ item.size }}</div>
+                                    {% endif %}
+                                    <div class="order-item-price">Rp {{ item.total_price }}</div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="order-summary-row">
+                        <span>Subtotal</span>
+                        <span class="order-summary-value">
+                            Rp {% if single_product %}{{ single_product.total_price }}{% else %}{{ cart_total }}{% endif %}
+                        </span>
+                    </div>
+                    
+                    <div class="order-summary-row">
+                        <span>Ongkos Kirim</span>
+                        <span class="order-summary-value" id="ongkir-value">
+                            Rp {% if single_product %}{{ shipping_cost }}{% else %}{{ shipping_cost }}{% endif %}
+                        </span>
+                    </div>
+                    <div class="order-summary-row order-summary-total">
+                        <span>Total Pembayaran</span>
+                        <span class="order-summary-value" id="total-value" data-total="{% if single_product %}{{ total }}{% else %}{{ total }}{% endif %}">
+                            Rp {% if single_product %}{{ total }}{% else %}{{ total }}{% endif %}
+                        </span>
+                    </div>
+                    
+                    <div class="security-info">
+                        <i class="fas fa-shield-alt security-icon"></i>
+                        <span>Transaksi Anda aman dan terenkripsi. Kami tidak menyimpan data kartu kredit Anda.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/wilayah.js' %}"></script>
+    <script src="{% static 'js/ongkir.js' %}"></script> 
+    <script>
+        // Fungsi untuk pemilihan metode pembayaran
+        document.querySelectorAll('.payment-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.payment-option').forEach(o => {
+                    o.classList.remove('active');
+                    o.querySelector('.payment-radio').checked = false;
+                });
+                this.classList.add('active');
+                this.querySelector('.payment-radio').checked = true;
+            });
+        });
+        
+        // Validasi submit di event form, bukan click button
+        document.querySelector('.checkout-form').addEventListener('submit', function(e) {
+            const fullName = document.getElementById('fullName').value;
+            if (!fullName) {
+                e.preventDefault();
+                alert('Harap lengkapi nama lengkap!');
+                return;
+            }
+            // Tampilkan loading
+            document.querySelector('.checkout-btn').innerHTML = '<i class="fas fa-spinner fa-spin"></i> Memproses...';
+            document.querySelector('.checkout-btn').disabled = true;
+        });
+    </script>
+{% endblock %}

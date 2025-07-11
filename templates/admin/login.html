@@ -1,0 +1,27 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<div style="max-width:420px;margin:60px auto;background:#f8f9fa;border-radius:14px;box-shadow:0 4px 24px #0002;padding:40px 32px 32px 32px;">
+    <div style="text-align:center;margin-bottom:28px;">
+        <img src="/static/image/product1.jpg" alt="Logo" style="width:64px;height:64px;border-radius:50%;box-shadow:0 2px 8px #0001;object-fit:cover;">
+        <h2 style="margin:18px 0 0 0;font-weight:700;color:#222;letter-spacing:1px;">Admin Panel</h2>
+        <p style="color:#888;font-size:15px;margin:6px 0 0 0;">Arabic Store</p>
+    </div>
+    {% if form.errors %}
+        <div style="background:#ffeaea;color:#e53935;padding:10px 0;border-radius:6px;text-align:center;margin-bottom:18px;">Username atau password salah.</div>
+    {% endif %}
+    <form method="post" action="{% url 'admin:login' %}" style="display:flex;flex-direction:column;gap:0;">
+        {% csrf_token %}
+        <div style="margin-bottom:18px;">
+            <input type="text" name="username" autofocus required placeholder="Username" style="width:100%;padding:12px 14px;border-radius:7px;border:1.5px solid #bbb;font-size:16px;box-sizing:border-box;">
+        </div>
+        <div style="margin-bottom:22px;">
+            <input type="password" name="password" required placeholder="Password" style="width:100%;padding:12px 14px;border-radius:7px;border:1.5px solid #bbb;font-size:16px;box-sizing:border-box;">
+        </div>
+        <div style="width:100%;display:flex;">
+            <button type="submit" style="flex:1;padding:12px 0;background:#1976d2;color:#fff;font-weight:600;font-size:17px;border:none;border-radius:7px;box-shadow:0 2px 8px #1976d233;transition:background 0.2s;">Login</button>
+        </div>
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+    <div style="margin-top:28px;text-align:center;color:#aaa;font-size:13px;">&copy; {{ now|date:'Y' }} Arabic Store. All rights reserved.</div>
+</div>
+{% endblock %}

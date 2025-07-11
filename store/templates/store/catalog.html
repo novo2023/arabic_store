@@ -1,0 +1,75 @@
+{% extends "store/base.html" %}
+{% load static %}
+
+{% block title %}
+    {% if category %}{{ category.name }}{% else %}Produk{% endif %}
+{% endblock %}
+
+{% block content %}
+    <section class="product-section">
+        <div class="container">
+            <h2 class="section-title">
+                {% if category %}{{ category.name }}{% else %}Semua Produk{% endif %}
+            </h2>
+            
+            <div class="filter-options">
+                <!-- Tambahkan opsi filter di sini jika diperlukan -->
+            </div>
+            
+            <div class="product-grid">
+                {% for product in products %}
+                <div class="product-card">
+                    {% if product.discount_price %}
+                    <span class="product-badge">Diskon</span>
+                    {% endif %}
+                    <a href="{% url 'store:product_detail' product.id product.slug %}">
+                        <div class="product-image">
+                            {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                            <img src="{% static 'images/no_image.png' %}" alt="No image">
+                            {% endif %}
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <a href="{% url 'store:product_detail' product.id product.slug %}">
+                            <div class="product-name">{{ product.name }}</div>
+                        </a>
+                        <div class="product-category">{{ product.category }}</div>
+                        <div class="product-price" style="display: flex; flex-direction: column; align-items: flex-start;">
+                            {% if product.discount_price %}
+                                <span class="original-price">Rp {{ product.price }}</span>
+                                <span class="discount-price">Rp {{ product.discount_price }}</span>
+                            {% else %}
+                                Rp {{ product.price }}
+                            {% endif %}
+                        </div>
+                        <a href="{% url 'store:product_detail' product.id product.slug %}" class="add-to-cart view-detail-btn">
+                            Lihat Detail
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Pagination -->
+            {% if products.paginator.num_pages > 1 %}
+            <div class="pagination">
+                {% if products.has_previous %}
+                <a href="?page=1{% if category %}&category={{ category.slug }}{% endif %}">&laquo; Pertama</a>
+                <a href="?page={{ products.previous_page_number }}{% if category %}&category={{ category.slug }}{% endif %}">Sebelumnya</a>
+                {% endif %}
+                
+                <span class="current">
+                    Halaman {{ products.number }} dari {{ products.paginator.num_pages }}
+                </span>
+                
+                {% if products.has_next %}
+                <a href="?page={{ products.next_page_number }}{% if category %}&category={{ category.slug }}{% endif %}">Selanjutnya</a>
+                <a href="?page={{ products.paginator.num_pages }}{% if category %}&category={{ category.slug }}{% endif %}">Terakhir &raquo;</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

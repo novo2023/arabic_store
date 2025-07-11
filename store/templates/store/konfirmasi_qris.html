@@ -1,0 +1,20 @@
+{% extends "store/base.html" %}
+{% load humanize %}
+{% block title %}Konfirmasi Pembayaran - QRIS{% endblock %}
+{% block content %}
+<div class="container" style="max-width:500px;margin:40px auto;">
+    <h2 class="section-title" style="text-align:center;">Pembayaran via QRIS</h2>
+    <div style="text-align:center;margin:24px 0;">
+        <img src="data:image/png;base64,{{ qr_img }}" alt="QRIS" style="max-width:220px;box-shadow:0 2px 8px #eee;border-radius:12px;">
+    </div>
+    {# <p style="text-align:center;font-size:1.1em;">Ongkos Kirim: <b>Rp {{ order.shipping_cost|default:0|intcomma }}</b></p> #}
+    <p style="text-align:center;font-size:1.2em;font-weight:bold;">
+        Total Pembayaran: Rp 
+        {% if total_bayar is not None %}{{ total_bayar|intcomma }}{% else %}{{ order.get_total_cost|add:order.shipping_cost|default:0|intcomma }}{% endif %}
+    </p>
+    <p style="text-align:center;">Silakan scan QR code di atas menggunakan aplikasi e-wallet atau mobile banking Anda.<br>Pesanan Anda akan diproses setelah pembayaran diterima.</p>
+    <div style="text-align:center;margin-top:32px;">
+        <a href="/" class="btn btn-primary">Kembali ke Beranda</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "store/base.html" %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.name }}{% else %}Produk{% endif %}
+{% endblock %}
+{% block content %}
+    <section class="product-section">
+        <div class="container">
+            <h2 class="section-title">
+                {% if category %}{{ category.name }}{% else %}Semua Produk{% endif %}
+            </h2>
+            <div class="product-grid">
+                {% for product in products %}
+                <div class="product-card">
+                    {% if product.discount_price %}
+                    <span class="product-badge">Diskon</span>
+                    {% endif %}
+                    <a href="{{ product.get_absolute_url }}">
+                        <div class="product-image">
+                            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}" alt="{{ product.name }}">
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <a href="{{ product.get_absolute_url }}">
+                            <div class="product-name">{{ product.name }}</div>
+                        </a>
+                        <div class="product-category">{{ product.category }}</div>
+                        <div class="product-price">
+                            Rp {{ product.price }}
+                            {% if product.discount_price %}
+                            <span class="original-price">Rp {{ product.discount_price }}</span>
+                            {% endif %}
+                        </div>
+                        <form action="{% url 'store:cart_add' product.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

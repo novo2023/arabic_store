@@ -1,0 +1,216 @@
+{% extends "store/base.html" %}
+{% load static %}
+{% load humanize %}
+{% load custom_filters %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-gallery">
+                <div class="thumbnails">
+                    {% for i in "1234" %}
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.png' %}{% endif %}" 
+                         class="thumbnail" 
+                         alt="Thumbnail {{ i }}">
+                    {% endfor %}
+                </div>
+                <div class="main-image-container">
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.png' %}{% endif %}" 
+                         class="main-image" 
+                         alt="{{ product.name }}">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 class="product-title">{{ product.name }}</h1>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(4.8)</span>
+                </div>
+                <div id="priceBox">
+                {% if product.discount_price %}
+                    <div class="price-large">
+                        <span class="original-price">Rp {{ product.price|intcomma }}</span><br>
+                        <span class="discount-price">Rp {{ product.discount_price|intcomma }}</span>
+                    </div>
+                {% else %}
+                    <div class="price-large">Rp {{ product.price|intcomma }}</div>
+                {% endif %}
+                </div>
+                <div class="product-description">
+                    <p>{{ product.description }}</p>
+                </div>
+                <form action="{% url 'store:cart_add' product.id %}" method="post" id="addToCartForm">
+                    {% csrf_token %}
+                    {% if variation_types %}
+                    <div class="product-variations">
+                        {% for vtype in variation_types %}
+                        <div class="variation-type">
+                            <h3>{{ vtype.name }}:</h3>
+                            <div class="size-box-group" id="variationGroup_{{ vtype.id }}">
+                                {% for value in vtype.values.all %}
+                                <button type="button" class="size-box" data-vtype="{{ vtype.id }}" data-vname="{{ vtype.name }}" data-value="{{ value.value }}" data-price="{{ value.price|default_if_none:'' }}">{{ value.value }}</button>
+                                {% endfor %}
+                            </div>
+                            <input type="hidden" name="size" id="selectedVariation_{{ vtype.id }}" required>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="quantity-selector">
+                        <h3>Jumlah:</h3>
+                        <div class="quantity-controls">
+                            <button type="button" class="qty-btn" onclick="decreaseQuantity()">-</button>
+                            <input id="quantity" name="quantity" class="quantity-input" type="number" value="1" min="1">
+                            <button type="button" class="qty-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-large">
+                        <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                    </button>
+                    <a href="#" id="buyNowBtn" class="btn-large btn-secondary">
+                        <i class="fas fa-bolt"></i> Beli Sekarang
+                    </a>
+                </form>
+                <script>
+                    // Harga utama (HTML)
+                    const defaultPriceHtml = `{% if product.discount_price %}<div class='price-large'><span class='original-price'>Rp {{ product.price|intcomma }}</span><br><span class='discount-price'>Rp {{ product.discount_price|intcomma }}</span></div>{% else %}<div class='price-large'>Rp {{ product.price|intcomma }}</div>{% endif %}`;
+                    const productPrice = "{{ product.price|floatformat:'0' }}";
+                    const hasDiscount = "{% if product.discount_price %}true{% else %}false{% endif %}";
+                    // Interaktif untuk semua variasi
+                    document.querySelectorAll('.size-box-group').forEach(function(group) {
+                        const buttons = group.querySelectorAll('.size-box');
+                        const vtypeId = group.id.replace('variationGroup_', '');
+                        const hiddenInput = document.getElementById('selectedVariation_' + vtypeId);
+                        buttons.forEach(btn => {
+                            btn.addEventListener('click', function() {
+                                buttons.forEach(b => b.classList.remove('active'));
+                                this.classList.add('active');
+                                hiddenInput.value = this.dataset.value;
+                                let price = this.dataset.price;
+                                if (price) {
+                                    if (hasDiscount === "true") {
+                                        document.getElementById('priceBox').innerHTML = `<div class='price-large'><span class='original-price'>Rp ${parseInt(productPrice).toLocaleString('id-ID')}</span><br><span class='discount-price'>Rp ${parseInt(price).toLocaleString('id-ID')}</span></div>`;
+                                    } else {
+                                        document.getElementById('priceBox').innerHTML = `<div class='price-large'>Rp ${parseInt(price).toLocaleString('id-ID')}</div>`;
+                                    }
+                                } else {
+                                    document.getElementById('priceBox').innerHTML = defaultPriceHtml;
+                                }
+                            });
+                        });
+                    });
+                    // Prevent submit jika ada variasi wajib tapi belum dipilih
+                    document.querySelector('form').addEventListener('submit', function(e) {
+                        let valid = true;
+                        document.querySelectorAll('input[type=hidden][id^=selectedVariation_]').forEach(function(inp) {
+                            if (!inp.value) valid = false;
+                        });
+                        if (!valid) {
+                            alert('Pilih variasi produk terlebih dahulu!');
+                            e.preventDefault();
+                        }
+                    });
+                    document.getElementById('buyNowBtn').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        let url = '/checkout/?product_id={{ product.id }}';
+                        // Ambil size/variasi jika ada
+                        let size = null;
+                        const sizeInput = document.querySelector('input[type=hidden][id^=selectedVariation_');
+                        if (sizeInput && sizeInput.value) {
+                            size = sizeInput.value;
+                            url += '&size=' + encodeURIComponent(size);
+                        }
+                        // Ambil quantity
+                        let qty = document.getElementById('quantity').value;
+                        if (qty) {
+                            url += '&qty=' + encodeURIComponent(qty);
+                        }
+                        window.location.href = url;
+                    });
+                    document.getElementById('addToCartForm').addEventListener('submit', function(e) {
+                        // Ambil size dari hidden input (jika ada variasi)
+                        const sizeInput = document.querySelector('input[type=hidden][id^=selectedVariation_');
+                        if (sizeInput && sizeInput.value) {
+                            // Pastikan field name="size" yang dikirim ke backend
+                            sizeInput.setAttribute('name', 'size');
+                        }
+                    });
+                </script>
+                <style>
+                    .size-box-group {
+                        display: flex;
+                        gap: 10px;
+                        margin-bottom: 10px;
+                    }
+                    .size-box {
+                        border: 2px solid #b88c4a;
+                        background: #fff;
+                        color: #222;
+                        padding: 8px 18px;
+                        border-radius: 8px;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                        outline: none;
+                    }
+                    .size-box.active, .size-box:hover {
+                        background: #b88c4a;
+                        color: #fff;
+                        border-color: #b88c4a;
+                        box-shadow: 0 2px 8px rgba(184,140,74,0.08);
+                    }
+                </style>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Produk Terkait -->
+    <section class="product-section">
+        <div class="container">
+            <h2 class="section-title">Produk Terkait</h2>
+            <div class="product-grid">
+                {% for product in related_products %}
+                <div class="product-card">
+                    {% if product.discount_price %}
+                    <span class="product-badge">Diskon</span>
+                    {% endif %}
+                    <a href="{{ product.get_absolute_url }}">
+                        <div class="product-image">
+                            {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                            <img src="{% static 'images/no_image.png' %}" alt="No image">
+                            {% endif %}
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <a href="{{ product.get_absolute_url }}">
+                            <div class="product-name">{{ product.name }}</div>
+                        </a>
+                        <div class="product-category">{{ product.category }}</div>
+                        <div class="product-price">
+                            Rp {{ product.price }}
+                            {% if product.discount_price %}
+                            <span class="original-price">Rp {{ product.discount_price }}</span>
+                            {% endif %}
+                        </div>
+                        <form action="{% url 'store:cart_add' product.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="add-to-cart">
+                                <i class="fas fa-cart-plus"></i> Tambah ke Keranjang
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

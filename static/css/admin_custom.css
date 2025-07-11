@@ -1,0 +1,44 @@
+/* static/css/admin_custom.css */
+:root {
+  --arabic-gold: #d4a574;
+  --arabic-brown: #b48a4a;
+  --arabic-cream: #fffbe9;
+}
+body, .module, .grp-module, .grp-group, .grp-changelist, .grp-content {
+  background: var(--arabic-cream) !important;
+  color: #333 !important;
+}
+#header, .grp-header, .grp-module .grp-collapse, .grp-module .grp-collapse h2 {
+  background: linear-gradient(90deg, var(--arabic-gold) 60%, var(--arabic-brown) 100%) !important;
+  color: #fff !important;
+}
+a, .grp-changelist-results a {
+  color: var(--arabic-brown) !important;
+}
+.button, input[type=submit], .grp-button, .grp-submit-row input {
+  background: linear-gradient(90deg, var(--arabic-gold) 60%, var(--arabic-brown) 100%) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 6px !important;
+}
+#user-tools, .grp-user-tools {
+  background: none !important;
+  color: var(--arabic-brown) !important;
+}
+#user-tools, .user-tools {
+    color: #fff !important;
+}
+#user-tools a, .user-tools a {
+    color: #fff !important;
+}
+#content-main, .grp-content {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #b48a4a22;
+  padding: 18px 18px 32px 18px;
+}
+#footer, .grp-footer {
+  background: #fffbe9 !important;
+  color: #b48a4a !important;
+  border-top: 1.5px solid #d4a574;
+  font-weight: 500;
+}

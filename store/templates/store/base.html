@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Arabic Store{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="{% url 'store:homepage' %}" class="logo">
+                <i class="fas fa-kaaba"></i> Arabic Store
+            </a>
+            <ul class="nav-menu">
+                <li><a href="{% url 'store:homepage' %}" class="nav-item {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="{% url 'store:catalog' %}" class="nav-item {% if request.resolver_match.url_name == 'catalog' %}active{% endif %}"><i class="fas fa-box"></i> Produk</a></li>
+                <li><a href="{% url 'store:promo' %}" class="nav-item {% if request.resolver_match.url_name == 'promo' %}active{% endif %}"><i class="fas fa-tag"></i> Promo</a></li>
+                <li><a href="{% url 'store:contact' %}" class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"><i class="fas fa-headset"></i> Kontak</a></li>
+            </ul>
+            <div class="user-actions">
+                <div class="search-container">
+                    <form action="{% url 'store:catalog' %}" method="get" style="display: flex; align-items: center;">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-bar" name="q" placeholder="Cari produk..." value="{{ request.GET.q|default:'' }}">
+                    </form>
+                </div>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'store:profile' %}" class="icon-btn" title="Profil">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                {% else %}
+                    <a href="{% url 'store:login' %}" class="icon-btn" title="Login">
+                        <i class="fas fa-user"></i>
+                    </a>
+                {% endif %}
+                <a href="{% url 'store:cart_detail' %}" class="icon-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">{{ cart|length }}</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section footer-about">
+                <h3>Arabic Store</h3>
+                <p>Toko terpercaya untuk produk Arab asli dan berkualitas tinggi. Kami menyediakan berbagai macam produk autentik mulai dari pakaian tradisional hingga peralatan rumah tangga.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Link Cepat</h3>
+                <ul class="footer-links">
+                    <li><a href="{% url 'store:homepage' %}"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                    <li><a href="{% url 'store:catalog' %}"><i class="fas fa-chevron-right"></i> Produk</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Kebijakan Pengembalian</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pengiriman</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kategori</h3>
+                <ul class="footer-links">
+                    {% for category in categories %}
+                    <li><a href="{% url 'store:catalog' %}?category={{ category.slug }}"><i class="fas fa-chevron-right"></i> {{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Berlangganan</h3>
+                <p>Dapatkan promo dan penawaran terbaru dari Arabic Store</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Masukkan email Anda">
+                    <button>Berlangganan</button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Arabic Store. Semua hak dilindungi.
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
