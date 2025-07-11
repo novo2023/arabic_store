@@ -2,13 +2,13 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 from .models import Product
-import nltk
-from nltk.corpus import stopwords
 
 # Pastikan stopwords sudah di-download jika ingin digunakan
-# nltk.download('stopwords')
+
 
 def get_recommendations(product, top_n=4):
+    import nltk
+    from nltk.corpus import stopwords
     products = list(Product.objects.filter(available=True))
     if len(products) <= 1:
         return []
