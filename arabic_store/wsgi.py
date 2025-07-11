@@ -19,5 +19,7 @@ application = get_wsgi_application()
 try:
     from django.core.management import call_command
     call_command('migrate', interactive=False)
+    # Auto-collectstatic on startup (for Render Free Plan)
+    call_command('collectstatic', interactive=False, verbosity=0)
 except Exception as e:
-    print(f"Auto-migrate error: {e}")
+    print(f"Auto-migrate/collectstatic error: {e}")
