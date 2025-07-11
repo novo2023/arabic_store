@@ -1,5 +1,5 @@
 """
-WSGI config for arabicstore project.
+WSGI config for arabic_store project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
