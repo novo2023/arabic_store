@@ -23,3 +23,9 @@ try:
     call_command('collectstatic', interactive=False, verbosity=0)
 except Exception as e:
     print(f"Auto-migrate/collectstatic error: {e}")
+
+try:
+    from django.core.management import call_command
+    call_command('loaddata', 'produk.json')
+except Exception as e:
+    print(f"Auto-loaddata error: {e}")

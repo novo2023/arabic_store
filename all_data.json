@@ -1,0 +1,2191 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$P39pHnX1nKqLAEaFJSTlOq$X9dQVi07MaLypAg7dcOroYUqPujYMemTr2SYWdY1ydw=",
+    "last_login": "2025-07-08T11:40:30.798Z",
+    "is_superuser": true,
+    "username": "arabic",
+    "first_name": "",
+    "last_name": "",
+    "email": "akhmad.zealand@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-25T18:56:24.356Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$lqNmlWBNeLS5WiMvvawNYA$qjfWneNuZAY7AGXQ5zK2xuQX4vxuqOv9QCQ5F3Q4+98=",
+    "last_login": "2025-06-26T00:29:24.410Z",
+    "is_superuser": true,
+    "username": "arabicstore",
+    "first_name": "",
+    "last_name": "",
+    "email": "akhmad.zealand@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-25T21:27:21.264Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "!5s8rq2TOTimWGifM8F9uksHJOWYK8jk1wGdmDXT0",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-25T22:39:23.053Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$m5wpQ3DZeZn7zCkEcsczHL$6vrwC4FnvHqsGe6LgH5b6AaedSzMX6Wqhr9tSUHtqU8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "new",
+    "first_name": "",
+    "last_name": "",
+    "email": "aaa@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-29T22:01:15.849Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$l5yxXDlwHFIPZfk8wK2Z5x$51Bnb4JMs+Sy3r3I18Ej3sBYOR8emuiPr2EPA+4/4j8=",
+    "last_login": "2025-07-07T19:24:23.930Z",
+    "is_superuser": false,
+    "username": "newe",
+    "first_name": "",
+    "last_name": "",
+    "email": "aaaa@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-29T22:01:41.382Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$9aqvlU9WafSupm3Y7E3xic$Zl7G6+zhUKgK/DqmdQz6oydcW+3IBwBnzFIELefk71U=",
+    "last_login": "2025-07-03T21:55:43.527Z",
+    "is_superuser": false,
+    "username": "tepo",
+    "first_name": "",
+    "last_name": "",
+    "email": "bujang@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-03T20:56:30.875Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ER9NUSBEEMVQ50HjTedmCv$vJPDJJCKQ+18DDuu00Ovb5EDALzrZgLESB2aHLE38JY=",
+    "last_login": "2025-07-07T20:14:40.002Z",
+    "is_superuser": false,
+    "username": "putang",
+    "first_name": "",
+    "last_name": "",
+    "email": "devi@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-07-07T20:14:32.707Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "27i8xvhhk8vqzhhsv3r5dbbrtn2hpvy9",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-4B8lfc5grdcLDiBbipMKcXdiKQV0ozdv5s0ibGuJW6clzpldmGGnX5YAn1RHkR9Q741jq-syJz4UfrSdTy3T63q4fwcFetnXOiPpYH1I5-AIws0oQumkzsJY8Np6BRhEGsQJ0AoJTLJ7ltKqDOzzBd52N58:1uW0V9:diILZY2OCmUWxXLQrw1HFEhIIwaF3ol2fjy6Iikzxo8",
+    "expire_date": "2025-07-13T22:27:55.341Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "56r43sik9ss81f3qa110rfbmbx5lin88",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAwlAIu3XsGMsOAVA0kpV013t026UK3773_NxFwXUpYe5rDxOIqlLj8MsL4SvUQ_MT6aDK2uswTySORp-3y3ji9b2f7d1Cwl33tsmdS3oyakDQgWfJgsopI4EA7ixqNNi6pgXY8Mg4JiR1kT5YRxOcL8dM4iQ:1uUVLE:lLR2VOzisEoJA1Gion9aqk9CuLICrr8JppeLbrP6GIg",
+    "expire_date": "2025-07-09T18:59:28.569Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9kf2z6exv6e0ery2cnzgpi9lad5vwnjq",
+  "fields": {
+    "session_data": ".eJxVj80OgjAQhF_F9EzIFral5ejdZyClW6T-UIVyUMK7Sw0HPc7MN5PMwhozx76ZJzc2nljNOMt-vdbYqxtSQBcznENuwxBH3-YJyfd0yk-B3O24s38DvZn6rY0gKqG46ghLTp0oQTtZuKqDAgmgIG1QI0pdtaRaJbAkyRWWxmpOWspt1JoxsnphHBoBcLjfknjOZog-vliNGXuM3rr0ATcAtsrk30nveAICzTZ-n3JY1_UD3sBPdA:1uW21B:Lxi5QdeT1Gzi__QFQtMxZ-QTTpYHxRTI1qAsrvngLIw",
+    "expire_date": "2025-07-14T00:05:05.166Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dj9uvekqs3ojnx8l5cmhes7gmcqvkxl8",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8hse4dO83EGBAqoYmpV0Z_12bdKHbe865LxbitrawjbKEidiZSXb63VLMj9J3QPfYbzPPc1-XKfFd4Qcd_DpTeV4O9--gxdG-NQjjjJe-EmhJ1WiBxariqlBAQijCCAhg0SXyyRvQZKUHHTNKQmvZ-wOyWzaZ:1uaxjw:qbzLw2fr9ATx_9MZhuZe-6d1e9pQQcJAFfRgeEFF1iU",
+    "expire_date": "2025-07-27T14:31:40.705Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "x3m1iufdcfrvzdqkrpzjnorwadfej94d",
+  "fields": {
+    "session_data": ".eJxtjsEOgjAQRP9lz6SpLaWFo3e_gWyXRaoGtJSDIfy7JeGgiZc9zLyZnRVaXNLQLjPHNnTQgILiW_NIdx53o7vheJ0ETWOKwYsdEYc7i8vU8eN8sD8FA85DTpP1UvdWE1beOjKWDRJLXyFro5yyVrNy1Dt2vnJUIvYSiWpEMh5VmUsJY4JmzQvzeS04ppDe0KgCnjEQ5yd1LaUUUsJWgP6lTv-obfsAFcZRZA:1uUaQb:HyvLHxFBxnnGB4tmZJyguglriCq8TFPTGA28aTepU54",
+    "expire_date": "2025-07-10T00:25:21.355Z"
+  }
+},
+{
+  "model": "store.productvariationtype",
+  "pk": 1,
+  "fields": {
+    "product": 6,
+    "name": "Ukuran"
+  }
+},
+{
+  "model": "store.productvariationtype",
+  "pk": 2,
+  "fields": {
+    "product": 10,
+    "name": "Ukuran"
+  }
+},
+{
+  "model": "store.productvariationtype",
+  "pk": 3,
+  "fields": {
+    "product": 9,
+    "name": "Ukuran"
+  }
+},
+{
+  "model": "store.productvariationtype",
+  "pk": 4,
+  "fields": {
+    "product": 7,
+    "name": "Ukuran"
+  }
+},
+{
+  "model": "store.productvariationtype",
+  "pk": 5,
+  "fields": {
+    "product": 8,
+    "name": "Ukuran"
+  }
+},
+{
+  "model": "store.productvariationtype",
+  "pk": 6,
+  "fields": {
+    "product": 5,
+    "name": "Ukuran"
+  }
+},
+{
+  "model": "store.productvariationtype",
+  "pk": 7,
+  "fields": {
+    "product": 4,
+    "name": "Ukuran"
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 2,
+  "fields": {
+    "variation_type": 1,
+    "value": "M",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 3,
+  "fields": {
+    "variation_type": 1,
+    "value": "L",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 4,
+  "fields": {
+    "variation_type": 1,
+    "value": "XL",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 5,
+  "fields": {
+    "variation_type": 2,
+    "value": "500 ml",
+    "stock": 20,
+    "price": 125000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 6,
+  "fields": {
+    "variation_type": 2,
+    "value": "750 ml",
+    "stock": 20,
+    "price": 145000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 7,
+  "fields": {
+    "variation_type": 3,
+    "value": "50x50",
+    "stock": 10,
+    "price": 75000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 8,
+  "fields": {
+    "variation_type": 3,
+    "value": "70x70",
+    "stock": 10,
+    "price": 100000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 9,
+  "fields": {
+    "variation_type": 3,
+    "value": "100x100",
+    "stock": 10,
+    "price": 125000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 10,
+  "fields": {
+    "variation_type": 4,
+    "value": "50 ml",
+    "stock": 10,
+    "price": 39000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 11,
+  "fields": {
+    "variation_type": 4,
+    "value": "100 ml",
+    "stock": 10,
+    "price": 45000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 12,
+  "fields": {
+    "variation_type": 5,
+    "value": "500 g",
+    "stock": 10,
+    "price": 55000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 13,
+  "fields": {
+    "variation_type": 5,
+    "value": "750 g",
+    "stock": 10,
+    "price": 65000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 14,
+  "fields": {
+    "variation_type": 5,
+    "value": "1000 g",
+    "stock": 10,
+    "price": 75000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 15,
+  "fields": {
+    "variation_type": 6,
+    "value": "M",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 16,
+  "fields": {
+    "variation_type": 6,
+    "value": "L",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 17,
+  "fields": {
+    "variation_type": 6,
+    "value": "XL",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 18,
+  "fields": {
+    "variation_type": 7,
+    "value": "M",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 19,
+  "fields": {
+    "variation_type": 7,
+    "value": "L",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.productvariationvalue",
+  "pk": 20,
+  "fields": {
+    "variation_type": 7,
+    "value": "XL",
+    "stock": 10,
+    "price": 99000
+  }
+},
+{
+  "model": "store.category",
+  "pk": 1,
+  "fields": {
+    "name": "pakaian",
+    "slug": "pakaian",
+    "icon": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 2,
+  "fields": {
+    "name": "parfum",
+    "slug": "parfum",
+    "icon": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 3,
+  "fields": {
+    "name": "makanan",
+    "slug": "makanan",
+    "icon": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 4,
+  "fields": {
+    "name": "aksesoris",
+    "slug": "aksesoris",
+    "icon": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 5,
+  "fields": {
+    "name": "kesehatan",
+    "slug": "kesehatan",
+    "icon": null
+  }
+},
+{
+  "model": "store.product",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "name": "Kaos Palestina - Save Gaza Palestine",
+    "slug": "kaos-palestina-save-gaza-palestine",
+    "description": "Tunjukkan dukunganmu terhadap kemerdekaan Palestina dengan Kaos Palestina Save Gaza. Kaos ini didesain khusus dengan kombinasi estetika modern dan pesan solidaritas yang kuat. Terbuat dari bahan katun premium 100% yang lembut, adem, dan nyaman digunakan untuk aktivitas sehari-hari.\r\n\r\nDesain sablon menggunakan teknik plastisol berkualitas tinggi yang awet dan tidak mudah pudar, bahkan setelah dicuci berulang kali. Tersedia dalam berbagai ukuran (M, L, XL) dan cocok untuk pria maupun wanita.\r\n\r\nDengan membeli produk ini, kamu tidak hanya mendapatkan fashion statement, tapi juga turut menyuarakan kepedulian terhadap perjuangan rakyat Palestina.",
+    "price": 129000,
+    "discount_price": 99000,
+    "stock": 10,
+    "available": true,
+    "created": "2025-06-26T00:30:22.495Z",
+    "updated": "2025-07-11T06:30:28.824Z",
+    "image": "product/save_gaza_putih.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "name": "Kaos Palestina - Al aqsa",
+    "slug": "kaos-palestina-al-aqsa",
+    "description": "KAOS PEDULI PALESTINA",
+    "price": 129000,
+    "discount_price": 99000,
+    "stock": 20,
+    "available": true,
+    "created": "2025-06-27T22:37:34.781Z",
+    "updated": "2025-06-30T00:03:20.190Z",
+    "image": "products/GAZA_TONIGT.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 6,
+  "fields": {
+    "category": 1,
+    "name": "SAVE GAZA PALESTINE HITAM",
+    "slug": "save-gaza-palestine-hitam",
+    "description": "KAOS PEDULI PALESTINA",
+    "price": 129000,
+    "discount_price": 99000,
+    "stock": 20,
+    "available": true,
+    "created": "2025-06-27T22:38:08.528Z",
+    "updated": "2025-06-30T00:02:51.108Z",
+    "image": "products/HITAM_e1lLg2r.jpg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
+  "fields": {
+    "category": 2,
+    "name": "Parfum Arabic - Egyptian",
+    "slug": "parfum-arabic-egyptian",
+    "description": "Parfum",
+    "price": 50000,
+    "discount_price": 39000,
+    "stock": 20,
+    "available": true,
+    "created": "2025-06-29T20:56:42.650Z",
+    "updated": "2025-06-30T00:02:03.443Z",
+    "image": "product/parfum.jpeg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 8,
+  "fields": {
+    "category": 3,
+    "name": "Kurma Arabic Gurun Sahara",
+    "slug": "kurma-arabic-gurun-sahara",
+    "description": "Kurma Arabic",
+    "price": 95000,
+    "discount_price": 55000,
+    "stock": 20,
+    "available": true,
+    "created": "2025-06-29T20:57:36.233Z",
+    "updated": "2025-06-30T00:01:41.537Z",
+    "image": "product/kurma.jpeg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 9,
+  "fields": {
+    "category": 4,
+    "name": "Kaligrafi Arabic - Berliac",
+    "slug": "kaligrafi-arabic-berliac",
+    "description": "Kaligrafi",
+    "price": 150000,
+    "discount_price": 75000,
+    "stock": 20,
+    "available": true,
+    "created": "2025-06-29T20:58:22.143Z",
+    "updated": "2025-06-30T01:05:31.004Z",
+    "image": "product/imgi_91_id-11134207-7ras8-m5cqfz1vuurk48.jpeg"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 10,
+  "fields": {
+    "category": 5,
+    "name": "Madu Herbal Arabic - Original Alami",
+    "slug": "madu-herbal-arabic-original-alami",
+    "description": "Madu Herbal Kesehatan",
+    "price": 200000,
+    "discount_price": 145000,
+    "stock": 20,
+    "available": true,
+    "created": "2025-06-29T20:59:08.399Z",
+    "updated": "2025-06-29T23:25:51.631Z",
+    "image": "product/imgi_7_id-11134207-7r98o-lxasncqph16254.jpeg"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:02:52.390Z",
+    "updated": "2025-07-03T04:02:52.390Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 2,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "13.04",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:03:14.220Z",
+    "updated": "2025-07-03T04:03:14.220Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 3,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "16.03",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:04:13.250Z",
+    "updated": "2025-07-03T04:04:13.250Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 4,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "14.03",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:04:24.234Z",
+    "updated": "2025-07-03T04:04:24.234Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 5,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:04:38.631Z",
+    "updated": "2025-07-03T04:04:38.631Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 6,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:04:58.768Z",
+    "updated": "2025-07-03T04:04:58.768Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 7,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:05:01.151Z",
+    "updated": "2025-07-03T04:05:01.151Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 8,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:05:21.969Z",
+    "updated": "2025-07-03T04:05:21.969Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 9,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:05:36.714Z",
+    "updated": "2025-07-03T04:05:36.714Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 10,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:06:18.570Z",
+    "updated": "2025-07-03T04:06:18.570Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 11,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.04",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:10:01.538Z",
+    "updated": "2025-07-03T04:10:01.538Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 12,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.04",
+    "phone": "444444444444444",
+    "shipping_cost": 0,
+    "created": "2025-07-03T04:10:56.727Z",
+    "updated": "2025-07-03T04:10:56.727Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 13,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:11:26.568Z",
+    "updated": "2025-07-03T04:11:26.568Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 14,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:12:41.357Z",
+    "updated": "2025-07-03T04:12:41.357Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 15,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:13:09.840Z",
+    "updated": "2025-07-03T04:13:09.840Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 16,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:14:01.856Z",
+    "updated": "2025-07-03T04:14:01.856Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 17,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:14:30.461Z",
+    "updated": "2025-07-03T04:14:30.461Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 18,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:22:46.078Z",
+    "updated": "2025-07-03T04:22:46.078Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 19,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:24:03.248Z",
+    "updated": "2025-07-03T04:24:03.248Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 20,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:24:22.831Z",
+    "updated": "2025-07-03T04:24:22.831Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 21,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:26:12.841Z",
+    "updated": "2025-07-03T04:26:12.841Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 22,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:26:30.920Z",
+    "updated": "2025-07-03T04:26:30.920Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 23,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:28:29.019Z",
+    "updated": "2025-07-03T04:28:29.019Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 24,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:40:08.563Z",
+    "updated": "2025-07-03T04:40:08.563Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 25,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:40:31.057Z",
+    "updated": "2025-07-03T04:40:31.057Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 26,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:45:42.949Z",
+    "updated": "2025-07-03T04:45:42.949Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 27,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:47:25.128Z",
+    "updated": "2025-07-03T04:47:25.128Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 28,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:48:50.651Z",
+    "updated": "2025-07-03T04:48:50.651Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 29,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:52:28.415Z",
+    "updated": "2025-07-03T04:52:28.415Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 30,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:54:10.733Z",
+    "updated": "2025-07-03T04:54:10.733Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 31,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:56:23.796Z",
+    "updated": "2025-07-03T04:56:23.796Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 32,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:56:38.706Z",
+    "updated": "2025-07-03T04:56:38.706Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 33,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T04:57:03.435Z",
+    "updated": "2025-07-03T04:57:03.435Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 34,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T21:01:08.506Z",
+    "updated": "2025-07-03T21:01:08.506Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 35,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.04",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T21:54:15.638Z",
+    "updated": "2025-07-03T21:54:15.638Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 36,
+  "fields": {
+    "user": 6,
+    "full_name": "aaaa",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T21:56:01.916Z",
+    "updated": "2025-07-03T21:56:01.916Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 37,
+  "fields": {
+    "user": 6,
+    "full_name": "ffff",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T22:02:40.276Z",
+    "updated": "2025-07-03T22:02:40.276Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 38,
+  "fields": {
+    "user": 6,
+    "full_name": "qqqqqq",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.04",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T22:06:25.778Z",
+    "updated": "2025-07-03T22:06:25.781Z",
+    "paid": false,
+    "payment_method": "cod"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 39,
+  "fields": {
+    "user": 6,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T22:09:12.335Z",
+    "updated": "2025-07-03T22:09:12.338Z",
+    "paid": false,
+    "payment_method": "cod"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 40,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "51.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T22:58:43.617Z",
+    "updated": "2025-07-03T22:58:43.617Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 41,
+  "fields": {
+    "user": 1,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-03T23:00:55.818Z",
+    "updated": "2025-07-03T23:00:55.822Z",
+    "paid": false,
+    "payment_method": "cod"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 42,
+  "fields": {
+    "user": null,
+    "full_name": "Devi",
+    "email": "devi@gmail.com",
+    "address": "Kost Bu Dwi",
+    "city": "34.01",
+    "phone": "082524242262",
+    "shipping_cost": 14000,
+    "created": "2025-07-06T10:53:55.489Z",
+    "updated": "2025-07-06T10:53:55.489Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 43,
+  "fields": {
+    "user": null,
+    "full_name": "Devi",
+    "email": "devi@gmail.com",
+    "address": "Kost Bu Dwi",
+    "city": "34.01",
+    "phone": "082524242262",
+    "shipping_cost": 14000,
+    "created": "2025-07-06T10:57:24.090Z",
+    "updated": "2025-07-06T10:57:24.090Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 44,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:38:41.181Z",
+    "updated": "2025-07-07T18:38:41.181Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 45,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "33.15",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:43:25.057Z",
+    "updated": "2025-07-07T18:43:25.057Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 46,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "33.15",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:44:38.060Z",
+    "updated": "2025-07-07T18:44:38.060Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 47,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:45:03.274Z",
+    "updated": "2025-07-07T18:45:03.274Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 48,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:45:32.004Z",
+    "updated": "2025-07-07T18:45:32.004Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 49,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:47:53.120Z",
+    "updated": "2025-07-07T18:47:53.120Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 50,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:48:36.708Z",
+    "updated": "2025-07-07T18:48:36.708Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 51,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "akhmad.zealand@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:49:00.956Z",
+    "updated": "2025-07-07T18:49:00.956Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 52,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:52:27.719Z",
+    "updated": "2025-07-07T18:52:27.719Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 53,
+  "fields": {
+    "user": 5,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T18:53:37.060Z",
+    "updated": "2025-07-07T18:53:37.060Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 54,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T19:14:46.124Z",
+    "updated": "2025-07-07T19:14:46.124Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 55,
+  "fields": {
+    "user": 5,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.03",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T19:16:57.461Z",
+    "updated": "2025-07-07T19:16:57.461Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 56,
+  "fields": {
+    "user": 5,
+    "full_name": "Akhmad Surono Apr",
+    "email": "akhmad.zealand@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T19:20:54.936Z",
+    "updated": "2025-07-07T19:20:54.936Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 57,
+  "fields": {
+    "user": 5,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T19:23:22.389Z",
+    "updated": "2025-07-07T19:23:22.389Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 58,
+  "fields": {
+    "user": 5,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T19:24:55.025Z",
+    "updated": "2025-07-07T19:24:55.025Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 59,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T19:59:14.878Z",
+    "updated": "2025-07-07T19:59:14.878Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 60,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T20:06:45.844Z",
+    "updated": "2025-07-07T20:06:45.844Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 61,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T20:08:18.489Z",
+    "updated": "2025-07-07T20:08:18.489Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 62,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T20:09:33.688Z",
+    "updated": "2025-07-07T20:09:33.688Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 63,
+  "fields": {
+    "user": null,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T20:12:07.464Z",
+    "updated": "2025-07-07T20:12:07.464Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 64,
+  "fields": {
+    "user": 7,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T20:15:06.011Z",
+    "updated": "2025-07-07T20:15:06.011Z",
+    "paid": false,
+    "payment_method": null
+  }
+},
+{
+  "model": "store.order",
+  "pk": 65,
+  "fields": {
+    "user": 7,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T20:20:24.438Z",
+    "updated": "2025-07-07T20:20:24.438Z",
+    "paid": false,
+    "payment_method": "qris"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 66,
+  "fields": {
+    "user": 7,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.01",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-07T20:22:12.205Z",
+    "updated": "2025-07-07T20:22:12.205Z",
+    "paid": false,
+    "payment_method": "cod"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 67,
+  "fields": {
+    "user": 1,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-10T13:11:15.726Z",
+    "updated": "2025-07-10T13:11:15.726Z",
+    "paid": false,
+    "payment_method": "qris"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 68,
+  "fields": {
+    "user": 1,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-13T14:25:20.492Z",
+    "updated": "2025-07-13T14:25:20.492Z",
+    "paid": false,
+    "payment_method": "qris"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 69,
+  "fields": {
+    "user": 1,
+    "full_name": "Akhmad Surono Apr",
+    "email": "aaa@gmail.com",
+    "address": "Kaliabu\r\nBanyuraden",
+    "city": "34.02",
+    "phone": "444444444444444",
+    "shipping_cost": 14000,
+    "created": "2025-07-13T14:31:40.696Z",
+    "updated": "2025-07-13T14:31:40.696Z",
+    "paid": false,
+    "payment_method": "qris"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 10,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 11,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 13,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 14,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 15,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 6,
+  "fields": {
+    "order": 17,
+    "product": 7,
+    "price": "39000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 7,
+  "fields": {
+    "order": 24,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 8,
+  "fields": {
+    "order": 25,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 9,
+  "fields": {
+    "order": 32,
+    "product": 9,
+    "price": "75000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 10,
+  "fields": {
+    "order": 33,
+    "product": 10,
+    "price": "145000.00",
+    "quantity": 11,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 11,
+  "fields": {
+    "order": 34,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 12,
+  "fields": {
+    "order": 35,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 13,
+  "fields": {
+    "order": 36,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 14,
+  "fields": {
+    "order": 37,
+    "product": 10,
+    "price": "145000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 15,
+  "fields": {
+    "order": 38,
+    "product": 9,
+    "price": "75000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 16,
+  "fields": {
+    "order": 39,
+    "product": 8,
+    "price": "55000.00",
+    "quantity": 1,
+    "size": "1000 g"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 17,
+  "fields": {
+    "order": 40,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 18,
+  "fields": {
+    "order": 41,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 10,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 19,
+  "fields": {
+    "order": 42,
+    "product": 9,
+    "price": "75000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 20,
+  "fields": {
+    "order": 44,
+    "product": 7,
+    "price": "39000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 21,
+  "fields": {
+    "order": 44,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 22,
+  "fields": {
+    "order": 45,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": null
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 23,
+  "fields": {
+    "order": 47,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 24,
+  "fields": {
+    "order": 48,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 25,
+  "fields": {
+    "order": 51,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 26,
+  "fields": {
+    "order": 52,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "L"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 27,
+  "fields": {
+    "order": 53,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 28,
+  "fields": {
+    "order": 54,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 29,
+  "fields": {
+    "order": 55,
+    "product": 9,
+    "price": "75000.00",
+    "quantity": 1,
+    "size": "100x100"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 30,
+  "fields": {
+    "order": 56,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 31,
+  "fields": {
+    "order": 57,
+    "product": 8,
+    "price": "55000.00",
+    "quantity": 1,
+    "size": "1000 g"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 32,
+  "fields": {
+    "order": 58,
+    "product": 7,
+    "price": "39000.00",
+    "quantity": 1,
+    "size": "100 ml"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 33,
+  "fields": {
+    "order": 64,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 10,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 34,
+  "fields": {
+    "order": 65,
+    "product": 6,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "L"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 35,
+  "fields": {
+    "order": 66,
+    "product": 5,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 36,
+  "fields": {
+    "order": 67,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 37,
+  "fields": {
+    "order": 68,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "L"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 38,
+  "fields": {
+    "order": 68,
+    "product": 6,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "XL"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 39,
+  "fields": {
+    "order": 69,
+    "product": 6,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "L"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 40,
+  "fields": {
+    "order": 69,
+    "product": 4,
+    "price": "99000.00",
+    "quantity": 1,
+    "size": "L"
+  }
+}
+]

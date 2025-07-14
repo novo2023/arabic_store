@@ -195,10 +195,12 @@
                             <div class="product-name">{{ product.name }}</div>
                         </a>
                         <div class="product-category">{{ product.category }}</div>
-                        <div class="product-price">
-                            Rp {{ product.price }}
+                        <div class="product-price" style="display: flex; flex-direction: column; align-items: flex-start;">
                             {% if product.discount_price %}
-                            <span class="original-price">Rp {{ product.discount_price }}</span>
+                                <span class="original-price">Rp {{ product.price }}</span>
+                                <span class="discount-price">Rp {{ product.discount_price }}</span>
+                            {% else %}
+                                Rp {{ product.price }}
                             {% endif %}
                         </div>
                         <form action="{% url 'store:cart_add' product.id %}" method="post">
